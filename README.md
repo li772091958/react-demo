@@ -11,4 +11,9 @@ webpack
 热加载（不刷新页面）
 
 ## TRY
-git clone
+```
+  git clone https://github.com/li772091958/react-demo.git
+  cd react-demo
+  npm install
+  npm run start
+```
