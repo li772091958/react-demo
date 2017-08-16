@@ -4,6 +4,7 @@
 react
 react-router
 redux
+redux-saga
 webpack
 
 ## 其他备注
