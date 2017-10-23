@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import {render} from 'react-dom'
 import App from './container/app'
+import 'rxjs'
 
 import { AppContainer } from 'react-hot-loader'
 
