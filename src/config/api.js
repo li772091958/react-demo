@@ -5,7 +5,9 @@ if (process.env.NODE_ENV === 'production') {
   }
 } else {
   Config = {
-    url: '/cenuon/top/mv?limit=[LIMIT]'
+    url: '/cenuon/top/mv?limit=[LIMIT]',
+    login: '/cenuon/login/cellphone?phone=[PHONE]&password=[PASSWORD]',
+    fm: '/cenuon/personal_fm'
   }
 }
 

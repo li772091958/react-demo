@@ -8,6 +8,7 @@ const webpack = require('webpack')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 const env = require('./env');
+const PATHS = require('./paths');
 const host = env.devServer.host || 'localhost';
 const port = env.devServer.port || 8000;
 
@@ -106,6 +107,14 @@ const config = {
 		new webpack.NamedModulesPlugin(),
 		new OpenBrowserPlugin({ url: `http://${host}:${port}` })
 	],
+    resolve: {
+      alias: {
+        '@': PATHS.app
+      },
+      descriptionFiles: ['package.json'],
+      enforceExtension: false,
+      extensions: ['.js', '.jsx', '.json']
+    },
 	devServer: {
 		contentBase: path.join(__dirname, "src"),
 		port: port,

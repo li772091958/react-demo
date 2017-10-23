@@ -9,6 +9,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const autoprefixer = require('autoprefixer');
 
+const PATHS = require('./paths');
+
 const config = {
 	context: path.resolve(__dirname, '../src'),
 	entry:{
@@ -121,7 +123,15 @@ const config = {
              NODE_ENV: JSON.stringify('production') 
            }
         })
-	]
+	],
+    resolve: {
+      alias: {
+        '@': PATHS.app
+      },
+      descriptionFiles: ['package.json'],
+      enforceExtension: false,
+      extensions: ['.js', '.jsx', '.json']
+    }
 }
 
 module.exports = config
